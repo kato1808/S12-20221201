@@ -1,5 +1,5 @@
 import { memo, VFC } from "react";
 
 export const Home: VFC = memo(() => {
-  return <p>Homeインページです</p>;
+  return <p>Homeページです</p>;
 });
