@@ -6,12 +6,10 @@ import { Router } from "./router/Router";
 
 export default function App() {
   return (
-    <div className="App">
-      <ChakraProvider theme={theme}>
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
-      </ChakraProvider>
-    </div>
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </ChakraProvider>
   );
 }
