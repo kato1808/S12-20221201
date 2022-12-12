@@ -10,22 +10,20 @@ export const useAuth = () => {
 
   const login = useCallback(
     (id: string) => {
-      setLoading = true;
-
-      axios.get<User>(
-        `https://jsonplaceholder.typicode.com/users/${id}`
-          .then((res) => {
-            if (res.data) {
-              history.push("/home");
-            } else {
-              alert("ユーザが見つかりません");
-            }
-          })
-          .catch(() => alert("ログインできません"))
-          .finally(() => setLoading(false))
-      );
+      setLoading(true);
+      axios
+        .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
+        .then((res) => {
+          if (res.data) {
+            history.push("/home");
+          } else {
+            alert("ユーザが見つかりません");
+          }
+        })
+        .catch(() => alert("ログインできません"))
+        .finally(() => setLoading(false));
     },
     [history]
   );
-  return { login, loading };
+  return { login };
 };

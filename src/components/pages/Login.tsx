@@ -5,8 +5,8 @@ import { PrimaryButton } from "../atoms/button/PrimaryButton";
 import { useAuth } from "../../hooks/useAuth";
 
 export const Login: VFC = memo(() => {
-  const { login, loading } = useAuth;
-  const [userId, setUserId] = useState("");
+  const { login, loading } = useAuth();
+  const [userId, setUserId] = useState(``);
   const onChangeUserId = (e: ChangeEvent<HTMLInputElement>) =>
     setUserId(e.target.value);
 
