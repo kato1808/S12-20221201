@@ -47,13 +47,18 @@ export const UserManagement: VFC = memo(() => {
           ))}
         </Wrap>
       )}
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+        autoFocus={false}
+        motionPreset="slideInBottom"
+      >
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent pb={6}>
           <ModalHeader>ユーザ詳細</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
-            <Stack>
+          <ModalBody mx={4}>
+            <Stack spacing={4}>
               <FormControl>
                 <FormLabel>名前</FormLabel>
                 <Input value="加藤裕幸" isReadOnly />
