@@ -12,7 +12,7 @@ export const useAllUsers = () => {
     setLoading(true);
     axios
       .get<Array<User>>("https://jsonplaceholder.typicode.com/users")
-      .then(() => setUsers(res.data))
+      .then((res) => setUsers(res.data))
       .catch(() => {
         showMessage({ title: "ユーザが見つかりません", status: "error" });
       })
