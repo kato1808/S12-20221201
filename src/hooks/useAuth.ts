@@ -17,7 +17,7 @@ export const useAuth = () => {
         .get<User>(`https://jsonplaceholder.typicode.com/users/${id}`)
         .then((res) => {
           if (res.data) {
-            showMessage({ title: "ログインしました。", status: "success" });
+            showMessage({ title: "ログインしました", status: "success" });
             history.push("/home");
           } else {
             showMessage({ title: "ユーザが見つかりません", status: "error" });
