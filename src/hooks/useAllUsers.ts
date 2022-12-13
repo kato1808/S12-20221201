@@ -3,7 +3,7 @@ import { useCallback, useState } from "react";
 import { User } from "../types/api/user";
 import { useMessage } from "./useMessage";
 
-export const useAllUser = () => {
+export const useAllUsers = () => {
   const { showMessage } = useMessage;
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState<Array<User>>();
@@ -15,7 +15,8 @@ export const useAllUser = () => {
       .then(() => setUsers(res.data))
       .catch(() => {
         showMessage({ title: "ユーザが見つかりません", status: "error" });
-      }),finally(()=>{
+      })
+      .finally(() => {
         setLoading(false);
       });
   }, []);
