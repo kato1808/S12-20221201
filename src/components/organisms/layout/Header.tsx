@@ -12,11 +12,9 @@ export const Header: VFC = memo(() => {
   const onClickHome = useCallback(() => history.push("/home"), [history]);
   const onClickUserManagement = useCallback(
     () => history.push("/home/user_management"),
-    [history]
+    []
   );
-  const onClickSetting = useCallback(() => history.push("/home/setting"), [
-    history
-  ]);
+  const onClickSetting = useCallback(() => history.push("/home/setting"), []);
 
   return (
     <>
