@@ -1,10 +1,8 @@
 import { ChangeEvent, memo, useEffect, useState, VFC } from "react";
 
 import {
-  Box,
   FormControl,
   FormLabel,
-  Image,
   Input,
   Modal,
   ModalBody,
@@ -13,8 +11,7 @@ import {
   ModalFooter,
   ModalHeader,
   ModalOverlay,
-  Stack,
-  Text
+  Stack
 } from "@chakra-ui/react";
 
 import { User } from "../../../types/api/user";
